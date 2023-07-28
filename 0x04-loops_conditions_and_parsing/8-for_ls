@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
+#print all files in currrent dir
 for V in *
 do
-	echo $V
+	echo "$V"
 done
