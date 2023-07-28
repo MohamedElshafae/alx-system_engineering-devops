@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #print all files in currrent dir
-for V in $ls
+
+for file in *
 do
-	echo "$V"
+	echo "${file#*-}"
 done
