@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for V in *
+do
+	echo $V
+done
