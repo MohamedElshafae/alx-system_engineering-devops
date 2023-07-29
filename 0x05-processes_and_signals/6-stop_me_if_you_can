@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pkill -x 6-stop_me_if_you_can
