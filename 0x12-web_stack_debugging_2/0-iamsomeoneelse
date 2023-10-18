@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# bash script tell me whoami
+username="$1"
+sudo -u "$username" whoami
