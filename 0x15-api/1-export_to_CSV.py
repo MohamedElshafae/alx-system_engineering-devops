@@ -15,7 +15,7 @@ if __name__ == "__main__":
     tasks = tasks.json()
     formated_str = ''
     for task in tasks:
-        formated_str += f'"{argv[1]}","{resource["name"]}",'
+        formated_str += f'"{resource["id"]}","{resource["name"]}",'
         formated_str += f'"{task["completed"]}","{task["title"]}"\n'
     with open(file_path, "w") as file:
         file.write(formated_str)
