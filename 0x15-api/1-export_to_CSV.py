@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     resource = get(f'https://jsonplaceholder.typicode.com/users/{argv[1]}')
     tasks = get(f'https://jsonplaceholder.typicode.com/users/{argv[1]}/todos')
-    file_path = 'USER_ID.csv'
+    file_path = '{argv[1]}.csv'
 
     resource = resource.json()
     tasks = tasks.json()
