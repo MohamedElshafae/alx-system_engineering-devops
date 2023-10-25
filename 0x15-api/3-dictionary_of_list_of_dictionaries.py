@@ -15,12 +15,14 @@ if __name__ == "__main__":
     for user in users:
         tasks = get(f'https://jsonplaceholder.typicode.com/users/'
                     f'{user["id"]}/todos').json()
+        new_data = []
         for task in tasks:
-            new_data = {
+
+            new_data.append({
                 "task": f"{task['title']}",
                 "completed": task['completed'],
                 "username": f"{user['username']}"
-            }
+                })
         data["{}".format(user['id'])] = new_data
     with open(file_path, "w") as file:
         json.dump(data, file)
