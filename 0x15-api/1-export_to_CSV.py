@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Python script to export data in the CSV format"""
-
 from requests import get
 from sys import argv
 
