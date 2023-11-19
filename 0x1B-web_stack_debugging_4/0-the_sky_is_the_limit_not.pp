@@ -2,7 +2,7 @@
 
 exec { 'increase-limt':
   provider    => 'shell',
-  command     => 'sudo sed -i "s/15/4096/" /etc/default/nginx',
+  command     => "sed -i 's/^ULIMIT=.*/ULIMIT=\"-n 15000\"/' /etc/default/nginx",
 }
 exec { 'nginx-restart':
   provider    => 'shell',
