@@ -5,7 +5,7 @@ exec { 'increase-limt':
   command     => "sed -i 's/^ULIMIT=.*/ULIMIT=\"-n 15000\"/' /etc/default/nginx",
 }
 
-exec { 'nginx-restart':
+-> exec { 'nginx-restart':
   provider    => 'shell',
   command     => 'service nginx restart',
 }
